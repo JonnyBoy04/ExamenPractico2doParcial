@@ -1,0 +1,39 @@
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-brand span {
+  color: blue;
+}
+
+.bg-light {
+  border: 1px solid #dee2e6;
+}
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+.p-5 {
+  padding: 3rem !important;
+}
+
+.text-primary {
+  color: #0d6efd !important;
+}
+
+.category {
+  margin-bottom: 1.5rem;
+}
+
+.img-fixed-size {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}

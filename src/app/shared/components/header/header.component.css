@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  height: 80px;
+  background-color: #6200ee;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo {
+  margin: 0 3px;
+  padding: 4px 15px;
+  font-size: 30px;
+}
+nav h2 {
+  margin: 0 5px;
+}
+.logo {
+  padding-left: 10px;
+  text-align: right;
+  color: white;
+  display: flex;
+}

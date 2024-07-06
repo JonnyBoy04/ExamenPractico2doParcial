@@ -1,0 +1,35 @@
+<div class="container mt-4">
+  <form class="d-flex">
+    <input [(ngModel)]="nombreVideoJuego" name="nombreVideoJuego" (input)="buscarVideoJuego()" class="form-control me-2"
+      type="search" placeholder="Buscar" aria-label="Buscar">
+  </form>
+  <div class="row mb-3">
+    <div class="col text-center">
+      <button (click)="buscarPorCategoria('Deportes')" class="btn btn-outline-primary m-3">Deportes</button>
+      <button (click)="buscarPorCategoria('Estrategia')"
+        class="btn btn-outline-primary m-3">Estrategia</button>
+      <button (click)="buscarPorCategoria('Rol')" class="btn btn-outline-primary m-3">Rol</button>
+      <button (click)="buscarPorCategoria('Aventura')" class="btn btn-outline-primary m-3">Aventura</button>
+      <button (click)="buscarPorCategoria('Shooter')" class="btn btn-outline-primary m-3">Shooter</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <h1 *ngIf="!isResultLoaded">Cargando Datos.....</h1>
+    <div *ngFor="let vj of listaVideoJuegos" class="col-md-4 category">
+      <div class="card">
+        <img [src]="'assets/videojuegos/'+vj.imagen" class="card-img-top img-fixed-size" [alt]="vj.nombre">
+        <div class="card-body">
+          <p class="card-text"><strong>Nombre:</strong></p>
+          <p class="card-text">{{vj.nombre}}</p>
+          <p class="card-text"><strong>Descripción:</strong></p>
+          <p class="card-text">{{vj.descripcion}}</p>
+          <p class="card-text"><strong>Precio:</strong></p>
+          <p class="card-text">$ {{vj.precio}}</p>
+          <p class="card-text"><strong>Categoria:</strong></p>
+          <p class="card-text">{{vj.categoria.nombreCategoria}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

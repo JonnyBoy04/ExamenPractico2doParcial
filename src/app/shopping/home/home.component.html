@@ -1,0 +1,20 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col">
+        <img src="assets/imgs/banner.jpg" class="card-img-top img-fixed-size" alt="banner">
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div *ngFor="let product of listaVideoJuegos" class="col-md-4 category">
+      <div class="card">
+        <img [src]="'assets/videojuegos/'+product.imagen" class="card-img-top img-fixed-size" [alt]="product.nombre">
+        <div class="card-body">
+          <p class="card-text"><strong>Nombre:</strong></p>
+          <p class="card-text">{{product.nombre}}</p>
+          <p class="card-text"><strong>Descripción:</strong></p>
+          <p class="card-text">{{product.descripcion}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
